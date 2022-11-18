@@ -104,17 +104,6 @@ function search(city) {
   axios.get(apiUrl).then(displayTemperature);
 }
 
-function showLocation(position) {
-  let apiKey = "842b36d55cb28eba74a018029d56b04c";
-  let apiUrl = `https://api.openweathermap.org/data/2.5//weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayTemperature);
-}
-
-function getCurrentPosition(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(showLocation);
-}
-
 function handleSubmit(event) {
   event.preventDefault();
   let city = document.querySelector("#city-input").value;
@@ -124,7 +113,4 @@ function handleSubmit(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-let currentButton = document.querySelector("#current-location-button");
-currentButton.addEventListener("click", getCurrentPosition);
-
-search("Vienna");
+searchCity("Vienna");
