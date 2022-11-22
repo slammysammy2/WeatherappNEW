@@ -1,61 +1,72 @@
 body {
-  font-family: arial, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
-
 h1 {
-  color: #878787;
+  color: #5f6f94;
   font-size: 24px;
-  font-weight: 100;
   line-height: 28px;
-  margin-bottom: 0;
+  display: block;
+  font-weight: 400;
+  margin-bottom: 10;
 }
-
 ul {
   margin: 0;
   padding: 0;
 }
-
 li {
   list-style: none;
-  margin: 0;
-  padding: 0;
-
-  color: rgb(135, 135, 135);
+  color: #5f6f94;
   font-size: 16px;
-  font-weight: 100;
+  font-weight: 200;
   line-height: 19px;
 }
 
-li:first-letter {
-  text-transform: capitalize;
+#temperature {
+  color: #5f6f94;
+}
+.btn {
+  background-color: #fef5ac;
+  border-color: #97d2ec;
+  border-radius: 4px;
+  color: #97d2ec;
+  font-style: italic;
+}
+
+.btn:hover {
+  background-color: #97d2ec;
+  border: none;
+  border-radius: 5px;
+  color: #fef5ac;
+  font-style: italic;
+  transition: all 150ms ease-in-out;
 }
 
 .weather-app-wrapper {
-  max-width: 600px;
+  max-width: 652px;
   margin: 30px auto;
 }
 
 .weather-app {
   padding: 20px;
-  border: 1px solid #dadde1;
+  border: 1px solid #97d2ec;
   border-radius: 5px;
 }
-
+#city-input {
+  border-color: #97d2ec;
+  font-style: italic;
+}
 .overview {
   margin-bottom: 20px;
 }
-
-.weather-temperature img {
+#icon {
   margin-right: 5px;
-  height: 64px;
-  width: 64px;
+  height: 60px;
+  width: 60px;
 }
-
 .weather-temperature strong {
-  color: rgb(33, 33, 33);
-  font-size: 64px;
+  font-weight: 40;
+  font-size: 46px;
   line-height: 1;
-  font-weight: 400;
 }
 
 .weather-temperature .units {
@@ -64,30 +75,29 @@ li:first-letter {
   top: -34px;
 }
 
-.weather-temperature .active {
-  color: rgb(33, 33, 33);
-  cursor: default;
-}
-
-.weather-temperature .active:hover {
-  text-decoration: none;
+li::first-letter {
+  text-transform: capitalize;
 }
 
 .weather-forecast {
   margin-top: 20px;
   text-align: center;
-  color: #000;
+  color: #153462;
+  opacity: 80%;
 }
 
 .weather-forecast-date {
   font-size: 16px;
-  opacity: 0.5;
+}
+
+.weather-forecast-temperature {
+  font-size: 14px;
+}
+
+.weather-forecast-temperature-max {
+  font-size: 13px;
 }
 
 .weather-forecast-temperature-min {
-  opacity: 0.5;
-}
-
-.weather-forecast-temperatures {
   font-size: 13px;
 }
