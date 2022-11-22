@@ -3,7 +3,7 @@ function formatDate(timestamp) {
 
   let hours = date.getHours();
   if (hours < 10) {
-    hours = `0${minutes}`;
+    hours = `0${hours}`;
   }
   let minutes = date.getMinutes();
   if (minutes < 10) {
@@ -77,9 +77,9 @@ function displayTemperature(response) {
   let windElement = document.querySelector("#wind");
   let humidityElement = document.querySelector("#humidity");
 
-  Temperature = response.data.main.temp;
+  celsiusTemperature = response.data.main.temp;
 
-  temperatureElement.innerHTML = Math.round(Temperature);
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
   cityElement.innerHTML = response.data.name;
   dateElement.innerHTML = `Last updated: ${formatDate(
     response.data.dt * 1000
