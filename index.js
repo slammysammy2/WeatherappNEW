@@ -22,14 +22,6 @@ let days = [
   "Saturday",
 ];
 
-function formatDay(timestamp) {
-  let date = new Date(timestamp * 1000);
-  let day = date.getDay();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-
-  return days[day];
-}
-
 function displayForecast(response) {
   let dailyForecast = response.data.daily;
   let forecastElement = document.querySelector("#weather-forecast");
