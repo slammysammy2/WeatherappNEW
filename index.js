@@ -24,8 +24,8 @@ let days = [
 
 function displayForecast(response) {
   let dailyForecast = response.data.daily;
-  let forecastElement = document.querySelector("#weather-forecast");
-  let forecastHTML = `<div class="row">`;
+  let forecastElement = document.querySelector("#forecast");
+  let forescastHTML = `<div class="row">`;
 
   dailyForecast.forEach(function (forecastDay, index) {
     if (index < 5) {
@@ -53,8 +53,8 @@ function displayForecast(response) {
     }
   });
 
-  forecastHTML = forecastHTML + `</div>`;
-  forecastElement.innerHTML = forecastHTML;
+  forescastHTML = forescastHTML + `</div>`;
+  forecastElement.innerHTML = forescastHTML;
 }
 
 function getForecast(coordinates) {
